@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+html { 
+  height: 100%; 
+  background: #1A2A3A;  
+  color: #FFF; 
+}
+body {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  min-height:100%;
+}
+
+.loading {
+  font-family: Oswald, sans-serif;
+  font-size: 4em;
+  text-shadow: 0px 0px 10px  rgba(0,0,0,.3);
+}
+   
+.loading.no1 .char {
+    animation: jump .4s linear infinite alternate;
+  animation-delay: calc( -.8s + ( var(--char-index)*.1s ) );
+  animation-timing-function: ease-in-out;
+}
+.loading.no2 .char {
+    animation: jump2 .8s linear infinite alternate;
+  animation-delay: calc( .2s + ( var(--char-index)*.1s ) );
+  animation-timing-function: ease-in-out;
+}
+@keyframes jump { 
+  0% {
+    transform:translateY(0);
+  }
+  100% {
+    transform: translateY(30%);
+  }
+}
+@keyframes jump2 { 
+  0% {
+    transform:scale(0.3);
+  }
+  100% {
+    transform: scale(1.8);
+  }
+}
+
+.dwf {
+  position:absolute;
+  bottom:4px;
+  right:10px;
+}
